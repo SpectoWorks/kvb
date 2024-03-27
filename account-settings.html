@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Account Settings</title>
+	<meta charset="UTF-8">
+	<meta name="format-detection" content="telephone=no">
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" href="css/style.css?_v=20240327202116">
+	<link rel="shortcut icon" href="favicon.ico">
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<div class="page-layout">
+				<div class="sidebar">
+					<div class="top-menu">
+						<a href="#">
+							<picture><source srcset="img/logo.webp" type="image/webp"><img src="img/logo.png" alt="KVB.gg" /></picture>
+						</a>
+					</div>
+					<div class="icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="menu__body">
+						<div class="menu-balance">
+							<div class="balance">
+								<p>Balance:</p>
+								<strong>5,394 Credits</strong>
+							</div>
+						</div>
+						<div class="sidebar-nav">
+							<nav>
+								<a href="dashboard.html" class="dashboard-link">Dashboard</a>
+								<a href="new-order.html" class="order-link">New Order</a>
+								<a href="add-balance.html" class="balance-link">Add Balance</a>
+								<a href="account-settings.html" class="account-link active">Account Settings</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="page-content">
+					<div class="container">
+						<div class="page-content-header">
+							<div>
+								<h2>Account Settings</h2>
+							</div>
+							<div class="header-panel">
+								<div class="your-balance">
+									<p>Your Balance:</p>
+									<strong>5,394 Credits</strong>
+								</div>
+								<a href="add-balance.html" class="add-balance"> Add Balance </a>
+								<div class="exit">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<mask id="mask0_1_78" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+											<rect width="24" height="24" fill="#E6FFDD" />
+										</mask>
+										<g mask="url(#mask0_1_78)">
+											<path d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#E6FFDD" />
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="account-settings-page">
+							<div class="form-settings">
+								<form id="change-password">
+									<div class="form-header">
+										<h2>Change Password</h2>
+										<p>Enter your current password to be bale to change your password.</p>
+									</div>
+									<div class="form-group">
+										<label for="current-password">Current Password</label>
+										<input type="password" class="input" id="current-password" value="***************" />
+									</div>
+									<div class="form-group">
+										<label for="new-password">New Password</label>
+										<input type="password" class="input" id="new-password" placeholder="New Password" required />
+									</div>
+									<div class="form-group">
+										<label for="new-confirm">Confirm New Password</label>
+										<input type="password" class="input" id="new-confirm" placeholder="Confirm New Password" required />
+									</div>
+									<button type="submit" class="btn btn-primary">Reset Password</button>
+								</form>
+							</div>
+							<div class="form-settings">
+								<form id="change-username">
+									<div class="form-header">
+										<h2>Change Username</h2>
+										<p>Change your username to a new one, you can use up to 20 characters.</p>
+									</div>
+									<div class="form-group">
+										<label>Current Username</label>
+										<div class="current-username">
+											<p>ThisIsAusername15</p>
+										</div>
+									</div>
+									<div class="form-group">
+										<label for="new-username">New Username</label>
+										<input type="text" class="input" id="new-username" value="CoolUsername2914" required placeholder="CoolUsername2914" />
+									</div>
+									<div class="form-group">
+										<label for="confirm-username">Confirm Username</label>
+										<input type="text" class="input" id="confirm-username" value="CoolUsername2914" placeholder="CoolUsername2914" required />
+									</div>
+
+									<button type="submit" class="btn btn-primary">Change Username</button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="js/app.min.js?_v=20240327202116"></script>
+</body>
+
+</html>
