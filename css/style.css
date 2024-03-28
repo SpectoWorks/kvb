@@ -338,7 +338,9 @@ textarea::placeholder {
   background-position: bottom;
   background-repeat: repeat-x;
   background-repeat: no-repeat;
-  min-width: 265px
+  min-width: 265px;
+  position: fixed;
+  top: 0
 }
 .sidebar .top-menu {
   padding: 35px 67px 37px;
@@ -403,6 +405,7 @@ textarea::placeholder {
   display: none
 }
 .page-content {
+  margin-left: 265px;
   padding-top: 57px;
   padding-bottom: 60px;
   width: 100%
@@ -1363,6 +1366,7 @@ textarea::placeholder {
     gap: 10px
   }
   .page-content {
+    margin-left: auto;
     padding-top: 30px
   }
   .page-content .container {
