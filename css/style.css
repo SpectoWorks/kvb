@@ -1231,6 +1231,7 @@ textarea::placeholder {
   background-color: #191b1f;
   background-repeat: no-repeat;
   background-position: bottom left;
+  background-size: contain;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1251,7 +1252,7 @@ textarea::placeholder {
   left: 0;
   justify-content: space-between
 }
-.process-account-page .header .logo img {
+.process-account-page .header .logo svg {
   max-width: 131px
 }
 .process-account-page .header .btn-secondary {
@@ -1625,7 +1626,7 @@ textarea::placeholder {
   .dashboard .start-row .start-row-item .start p {
     font-size: 16px
   }
-  .page-layout .sidebar .top-menu img {
+  .page-layout .sidebar .top-menu svg {
     max-width: 110px
   }
   .page-content .page-content-header {
@@ -1701,7 +1702,7 @@ textarea::placeholder {
   .process-account-page .header {
     padding: 30px 15px
   }
-  .process-account-page .header .logo img {
+  .process-account-page .header .logo svg {
     max-width: 110px
   }
   .process-account-page .form-page {
@@ -1777,6 +1778,9 @@ textarea::placeholder {
 @media (max-width:540px) {
   .add-plan-block .plan-item h3 {
     font-size: 24px
+  }
+  .process-account-page {
+    background-size: cover
   }
 }
 @media (max-width:520px) {
