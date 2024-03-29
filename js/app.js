@@ -303,6 +303,7 @@
                 next: "Next Page"
             }
         },
+        autoWidth: true,
         style: {
             table: {
                 width: "100%",
@@ -316,6 +317,10 @@
             }
         }
     });
+    let eyeBalance = document.querySelector(".your-balance strong");
+    if (eyeBalance) eyeBalance.addEventListener("click", (event => {
+        event.target.classList.toggle("active");
+    }));
     window["FLS"] = true;
     isWebp();
     menuInit();
