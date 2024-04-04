@@ -317,10 +317,30 @@
             }
         }
     });
-    let eyeBalance = document.querySelector(".your-balance strong");
+    let eyeBalance = document.getElementById("eye-balance");
+    let eyeContent = document.getElementById("eye-content");
+    let dropdownPanel = document.getElementById("dropdown-panel-panel");
     if (eyeBalance) eyeBalance.addEventListener("click", (event => {
-        event.target.classList.toggle("active");
+        eyeBalance.classList.toggle("active");
+        eyeContent.classList.toggle("active");
+        dropdownPanel.classList.toggle("active");
     }));
+    let buttonDropdown = document.getElementById("dropdown__button");
+    let listDropdown = document.getElementById("dropdown-list");
+    if (buttonDropdown) buttonDropdown.addEventListener("click", (event => {
+        buttonDropdown.classList.toggle("active");
+        listDropdown.classList.toggle("active");
+    }));
+    function closeDropdown() {
+        buttonDropdown.classList.remove("active");
+        listDropdown.classList.remove("active");
+    }
+    const onClickOutside = (element, callback) => {
+        document.addEventListener("click", (e => {
+            if (!element.contains(e.target)) callback();
+        }));
+    };
+    onClickOutside(buttonDropdown, closeDropdown);
     window["FLS"] = true;
     isWebp();
     menuInit();

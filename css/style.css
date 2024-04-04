@@ -425,7 +425,8 @@ textarea::placeholder {
   padding-bottom: 41px;
   border-bottom: 1px solid #424945;
   width: 100%;
-  margin-bottom: 60px
+  margin-bottom: 60px;
+  font-size: 16px
 }
 .page-content .page-content-header h2 {
   font-size: 30px
@@ -473,43 +474,102 @@ textarea::placeholder {
   align-items: center;
   justify-content: center;
   gap: 15px;
-  margin-right: 10px
-}
-.page-content .page-content-header .header-panel .your-balance strong {
-  color: #53fc18;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  margin-right: 10px;
   position: relative
 }
-.page-content .page-content-header .header-panel .your-balance strong i {
-  position: relative;
-  font-weight: 700;
-  font-style: normal
+.page-content .page-content-header .header-panel .your-balance #eye-content {
+  min-width: 108px;
+  display: none;
+  position: absolute;
+  transition: all .4s ease;
+  right: 0
 }
-.page-content .page-content-header .header-panel .your-balance strong:after {
-  content: "";
+.page-content .page-content-header .header-panel .your-balance #eye-content.active {
+  display: block!important
+}
+.page-content .page-content-header .header-panel .your-balance .eye {
   width: 24px;
   height: 24px;
   display: inline-block;
   background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27none%27%3E%3Cmask id=%27mask0_1_74%27 style=%27mask-type:alpha%27 maskUnits=%27userSpaceOnUse%27 x=%270%27 y=%270%27 width=%2724%27 height=%2724%27%3E%3Crect width=%2724%27 height=%2724%27 fill=%27%2353FC18%27/%3E%3C/mask%3E%3Cg mask=%27url%28%23mask0_1_74%29%27%3E%3Cpath d=%27M12 16C13.25 16 14.3125 15.5625 15.1875 14.6875C16.0625 13.8125 16.5 12.75 16.5 11.5C16.5 10.25 16.0625 9.1875 15.1875 8.3125C14.3125 7.4375 13.25 7 12 7C10.75 7 9.6875 7.4375 8.8125 8.3125C7.9375 9.1875 7.5 10.25 7.5 11.5C7.5 12.75 7.9375 13.8125 8.8125 14.6875C9.6875 15.5625 10.75 16 12 16ZM12 14.2C11.25 14.2 10.6125 13.9375 10.0875 13.4125C9.5625 12.8875 9.3 12.25 9.3 11.5C9.3 10.75 9.5625 10.1125 10.0875 9.5875C10.6125 9.0625 11.25 8.8 12 8.8C12.75 8.8 13.3875 9.0625 13.9125 9.5875C14.4375 10.1125 14.7 10.75 14.7 11.5C14.7 12.25 14.4375 12.8875 13.9125 13.4125C13.3875 13.9375 12.75 14.2 12 14.2ZM12 19C9.56667 19 7.35 18.3208 5.35 16.9625C3.35 15.6042 1.9 13.7833 1 11.5C1.9 9.21667 3.35 7.39583 5.35 6.0375C7.35 4.67917 9.56667 4 12 4C14.4333 4 16.65 4.67917 18.65 6.0375C20.65 7.39583 22.1 9.21667 23 11.5C22.1 13.7833 20.65 15.6042 18.65 16.9625C16.65 18.3208 14.4333 19 12 19ZM12 17C13.8833 17 15.6125 16.5042 17.1875 15.5125C18.7625 14.5208 19.9667 13.1833 20.8 11.5C19.9667 9.81667 18.7625 8.47917 17.1875 7.4875C15.6125 6.49583 13.8833 6 12 6C10.1167 6 8.3875 6.49583 6.8125 7.4875C5.2375 8.47917 4.03333 9.81667 3.2 11.5C4.03333 13.1833 5.2375 14.5208 6.8125 15.5125C8.3875 16.5042 10.1167 17 12 17Z%27 fill=%27%2353FC18%27/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center;
-  margin-left: 15px;
-  cursor: pointer
+  cursor: pointer;
+  transition: all .4s ease
 }
-.page-content .page-content-header .header-panel .your-balance strong.active:after {
+.page-content .page-content-header .header-panel .your-balance .eye.active {
   background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2724%27 height=%2724%27 viewBox=%270 0 24 24%27 fill=%27none%27%3E%3Cmask id=%27mask0_78_2%27 style=%27mask-type:alpha%27 maskUnits=%27userSpaceOnUse%27 x=%270%27 y=%270%27 width=%2724%27 height=%2724%27%3E%3Crect width=%2724%27 height=%2724%27 fill=%27%2353FC18%27/%3E%3C/mask%3E%3Cg mask=%27url%28%23mask0_78_2%29%27%3E%3Cpath d=%27M16.1 13.3L14.65 11.85C14.8 11.0667 14.575 10.3334 13.975 9.65005C13.375 8.96672 12.6 8.70005 11.65 8.85005L10.2 7.40005C10.4833 7.26672 10.7708 7.16672 11.0625 7.10005C11.3542 7.03338 11.6667 7.00005 12 7.00005C13.25 7.00005 14.3125 7.43755 15.1875 8.31255C16.0625 9.18755 16.5 10.25 16.5 11.5C16.5 11.8334 16.4667 12.1459 16.4 12.4375C16.3333 12.7292 16.2333 13.0167 16.1 13.3ZM19.3 16.4501L17.85 15.05C18.4833 14.5667 19.0458 14.0376 19.5375 13.4626C20.0292 12.8876 20.45 12.2334 20.8 11.5C19.9667 9.81672 18.7708 8.47922 17.2125 7.48755C15.6542 6.49588 13.9167 6.00005 12 6.00005C11.5167 6.00005 11.0417 6.03338 10.575 6.10005C10.1083 6.16672 9.65 6.26672 9.2 6.40005L7.65 4.85005C8.33333 4.56672 9.03333 4.35422 9.75 4.21255C10.4667 4.07088 11.2167 4.00005 12 4.00005C14.5167 4.00005 16.7583 4.69588 18.725 6.08755C20.6917 7.47922 22.1167 9.28338 23 11.5C22.6167 12.4834 22.1125 13.3959 21.4875 14.2375C20.8625 15.0792 20.1333 15.8167 19.3 16.4501ZM19.8 22.6L15.6 18.4501C15.0167 18.6334 14.4292 18.7709 13.8375 18.8626C13.2458 18.9542 12.6333 19 12 19C9.48333 19 7.24167 18.3042 5.275 16.9125C3.30833 15.5209 1.88333 13.7167 1 11.5C1.35 10.6167 1.79167 9.79588 2.325 9.03755C2.85833 8.27922 3.46667 7.60005 4.15 7.00005L1.4 4.20005L2.8 2.80005L21.2 21.2001L19.8 22.6ZM5.55 8.40005C5.06667 8.83338 4.625 9.30838 4.225 9.82505C3.825 10.3417 3.48333 10.9 3.2 11.5C4.03333 13.1834 5.22917 14.5209 6.7875 15.5126C8.34583 16.5042 10.0833 17.0001 12 17.0001C12.3333 17.0001 12.6583 16.9792 12.975 16.9376C13.2917 16.8959 13.6167 16.85 13.95 16.8L13.05 15.85C12.8667 15.9 12.6917 15.9376 12.525 15.9626C12.3583 15.9876 12.1833 16 12 16C10.75 16 9.6875 15.5625 8.8125 14.6875C7.9375 13.8125 7.5 12.75 7.5 11.5C7.5 11.3167 7.5125 11.1417 7.5375 10.975C7.5625 10.8084 7.6 10.6334 7.65 10.45L5.55 8.40005Z%27 fill=%27%2353FC18%27/%3E%3C/g%3E%3C/svg%3E");
   background-repeat: no-repeat;
   background-position: center center
 }
-.page-content .page-content-header .header-panel .your-balance strong.active:before {
-  content: "******";
-  display: inline-block
-}
-.page-content .page-content-header .header-panel .your-balance strong.active i {
-  display: none;
+#dropdown-panel-panel.active {
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   opacity: 0
+}
+.dropdown {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end
+}
+.dropdown .dropdown__list {
+  position: absolute;
+  border-radius: 8px;
+  border: 1px solid #424945;
+  background: #24262b;
+  color: #53fc18;
+  text-align: right;
+  padding: 15px 18px;
+  font-family: Inter;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  top: 26px;
+  right: 0;
+  transition: all .4s ease;
+  opacity: 0;
+  z-index: -1
+}
+.dropdown .dropdown__list li {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.36px
+}
+.dropdown .dropdown__list li:last-child {
+  margin-bottom: 0
+}
+.dropdown .dropdown__list.active {
+  opacity: 1;
+  z-index: 10
+}
+.dropdown button.dropdown__button {
+  font-size: 16px;
+  white-space: nowrap;
+  color: #53fc18;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700
+}
+.dropdown button.dropdown__button:after {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 5px;
+  margin-left: 4px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 width=%2712%27 height=%277%27 viewBox=%270 0 12 7%27 fill=%27none%27%3E%3Cpath d=%27M11 6L6 0.999999L1 6%27 stroke=%27%2353FC18%27 stroke-width=%271.5%27 stroke-linecap=%27round%27 stroke-linejoin=%27round%27/%3E%3C/svg%3E");
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: rotate(180deg);
+  transform: rotate(180deg)
+}
+.dropdown button.dropdown__button.active:after {
+  -webkit-transform: rotate(0);
+  transform: rotate(0)
 }
 .row {
   display: flex;
@@ -1447,7 +1507,8 @@ textarea::placeholder {
     padding: 120px 32px 1.5rem 32px;
     transition: left .3s;
     text-align: center;
-    z-index: 200
+    z-index: 200;
+    font-size: 16px
   }
   .icon-menu {
     display: block;
@@ -1784,12 +1845,30 @@ textarea::placeholder {
   }
 }
 @media (max-width:520px) {
+  .page-layout .sidebar .top-menu svg {
+    max-width: 70px
+  }
   .page-content .page-content-header .header-panel .your-balance {
     flex-direction: column-reverse;
     text-align: right;
-    align-items: flex-end;
+    align-items: center;
     margin-right: 4px;
-    justify-content: flex-end
+    justify-content: center
+  }
+  .page-content .page-content-header .header-panel .your-balance .eye {
+    position: absolute;
+    top: 0;
+    left: -27px
+  }
+  .page-content .page-content-header .header-panel .your-balance #eye-content {
+    right: inherit;
+    left: 0
+  }
+  .dropdown {
+    margin-bottom: 4px
+  }
+  .dropdown .dropdown__list {
+    top: 24px
   }
   .page-content .page-content-header .header-panel .add-balance {
     margin-right: 8px
@@ -1798,7 +1877,7 @@ textarea::placeholder {
     display: none
   }
   .page-content .page-content-header .header-panel {
-    top: 15px
+    top: 20px
   }
   .page-content .page-content-header .header-panel .mobile-panel-col {
     flex-direction: column;
@@ -1849,11 +1928,10 @@ textarea::placeholder {
 }
 @media (max-width:350px) {
   .page-content .page-content-header .header-panel {
-    right: 15px;
-    top: 10px
+    right: 45px
   }
   .page-layout .sidebar .top-menu img {
-    max-width: 72px
+    max-width: 70px
   }
 }
 .webp .btn-google span:before {
