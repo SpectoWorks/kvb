@@ -1,0 +1,316 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<!-- <style>body{opacity: 0;}</style> -->
+	<link rel="stylesheet" type="text/css" href="https://unpkg.com/gridjs/dist/theme/mermaid.min.css?_v=20240404223655" />
+	<link rel="stylesheet" href="css/style.css?_v=20240404223655" />
+	<link rel="shortcut icon" href="favicon.ico" />
+	<!-- <meta name="robots" content="noindex, nofollow"> -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+</head>
+
+<body>
+	<div class="wrapper">
+		<main>
+			<div class="page-layout">
+				<div class="sidebar">
+					<div class="top-menu">
+						<a href="#">
+							<svg xmlns="http://www.w3.org/2000/svg" width="131" height="36" viewBox="0 0 131 36" fill="none">
+								<path d="M0 35.1328V0H11.7114V7.82259H15.6227V3.9113H19.5115V0H31.2229V11.7114H27.3341V15.6227H23.4228V19.534H27.3341V23.4228H31.2229V35.1342H19.5115V31.2454H15.6227V27.3341H11.7114V35.1342H0V35.1328Z" fill="#53FC18" />
+								<path d="M42.9329 35.1328V27.3328H39.0441V19.5327H35.1328V0H46.8442V15.6227H54.6443V0H66.3557V19.534H62.4669V27.3341H58.5556V35.1342H42.9329V35.1328Z" fill="#53FC18" />
+								<path d="M70.2676 35.1328V0H93.6904V3.9113H97.6017V15.6227H93.6904V19.534H97.6017V31.2454H93.6904V35.1342H70.2676V35.1328ZM85.8903 11.7114V7.82259H81.979V11.7114H85.8903ZM85.8903 27.3341V23.4228H81.979V27.3341H85.8903Z" fill="#53FC18" />
+								<path d="M101.418 35.1328V31.8489H104.702V35.1328H101.418Z" fill="white" />
+								<path d="M107.996 35.1329V33.4955H106.35V21.988H107.996V20.3414H117.857V25.2719H111.28V30.2024H112.927V26.9185H117.857V35.1329H107.996Z" fill="white" />
+								<path d="M121.141 35.1329V33.4955H119.494V21.988H121.141V20.3414H131.002V25.2719H124.425V30.2024H126.071V26.9185H131.002V35.1329H121.141Z" fill="white" />
+							</svg>
+						</a>
+					</div>
+					<div class="icon-menu">
+						<span></span>
+						<span></span>
+						<span></span>
+					</div>
+					<div class="menu__body">
+						<div class="menu-balance">
+							<div class="balance">
+								<p>Balance:</p>
+								<strong>5,394 Credits</strong>
+							</div>
+						</div>
+						<div class="sidebar-nav">
+							<nav>
+								<a href="home.html" class="home-link active">Home</a>
+								<a href="dashboard.html" class="dashboard-link">Dashboard</a>
+								<a href="add-balance.html" class="balance-link">Add Balance</a>
+								<a href="account-settings.html" class="account-link">Account Settings</a>
+							</nav>
+						</div>
+					</div>
+				</div>
+				<div class="page-content">
+					<div class="container">
+						<div class="page-content-header">
+							<div>
+								<h2>Home</h2>
+							</div>
+							<div class="header-panel">
+								<div class="mobile-panel-col">
+									<div class="your-balance" id="your-balance">
+										<div class="eye" id="eye-balance"></div>
+										<p>Your Balance:</p>
+										<span id="eye-content">*******</span>
+										<div class="dropdown" id="dropdown-panel-panel">
+											<button class="dropdown__button" id="dropdown__button" type="button">5,394 Credits</button>
+											<ul class="dropdown__list" id="dropdown-list">
+												<li class="dropdown__list-item">5,391 Tokens</li>
+												<li class="dropdown__list-item">53,595 Tokens</li>
+												<li class="dropdown__list-item">7,164 Tokens</li>
+											</ul>
+										</div>
+									</div>
+									<a href="add-balance.html" class="add-balance"> Add Balance </a>
+								</div>
+								<div class="exit">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none">
+										<mask id="mask0_1_78" style="mask-type: alpha" maskUnits="userSpaceOnUse" x="0" y="0" width="24" height="24">
+											<rect width="24" height="24" fill="#E6FFDD" />
+										</mask>
+										<g mask="url(#mask0_1_78)">
+											<path d="M5 21C4.45 21 3.97917 20.8042 3.5875 20.4125C3.19583 20.0208 3 19.55 3 19V5C3 4.45 3.19583 3.97917 3.5875 3.5875C3.97917 3.19583 4.45 3 5 3H12V5H5V19H12V21H5ZM16 17L14.625 15.55L17.175 13H9V11H17.175L14.625 8.45L16 7L21 12L16 17Z" fill="#E6FFDD" />
+										</g>
+									</svg>
+								</div>
+							</div>
+						</div>
+						<div class="dashboard">
+							<div class="column-grid">
+								<div class="start-row">
+									<div class="row">
+										<div class="box start-row-item">
+											<div class="d-flex">
+												<h3>Kick Views</h3>
+												<div class="available">
+													<span>53,391</span>
+													<p>Available</p>
+												</div>
+											</div>
+											<a href="#" class="btn start">
+												<p>Get Started</p>
+											</a>
+										</div>
+										<div class="box start-row-item">
+											<div class="d-flex">
+												<h3>Kick Chats</h3>
+												<div class="available">
+													<span>53,391</span>
+													<p>Available</p>
+												</div>
+											</div>
+											<a href="#" class="btn start kick-start">
+												<p>Get Started</p>
+											</a>
+										</div>
+										<div class="box start-row-item">
+											<div class="d-flex">
+												<h3>Kick Followers</h3>
+												<div class="available">
+													<span>53,391</span>
+													<p>Available</p>
+												</div>
+											</div>
+											<a href="#" class="btn start kick-followers">
+												<p>Get Started</p>
+											</a>
+										</div>
+										<div class="box start-row-item">
+											<div class="d-flex">
+												<h3>Kick Likes</h3>
+												<div class="available">
+													<span>53,391</span>
+													<p>Available</p>
+												</div>
+											</div>
+											<a href="#" class="btn start kick-likes">
+												<p>Get Started</p>
+											</a>
+										</div>
+									</div>
+								</div>
+								<div class="middle-row">
+									<div class="row">
+										<div class="box repeat-order">
+											<div class="left">
+												<h2>Quick Buy your Recent Order</h2>
+												<a href="#" class="btn btn-green">Repeat Order</a>
+											</div>
+											<div class="right">
+												<p><strong>5,000</strong>Kick Views</p>
+												<a>https://kick.com/username</a>
+												<div class="tags">
+													<p>25-01-2024</p>
+													<p>4,350 Credits</p>
+												</div>
+											</div>
+										</div>
+										<div class="middle-items">
+											<div class="box">
+												<div>
+													<h3>Top up your Balance</h3>
+													<p>You current balance is: 5,205</p>
+												</div>
+												<a href="#" class="btn btn-money">Top up Balance</a>
+											</div>
+											<div class="box">
+												<div>
+													<h3>Buy a Subscription</h3>
+													<p>Your current subscription: Starter</p>
+												</div>
+												<a href="#" class="btn btn-money">Buy Subscription</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="content-table">
+									<h3>Recent Orders</h3>
+									<table id="orders-table-recent">
+										<thead>
+											<tr>
+												<th>ID</th>
+												<th>Date</th>
+												<th>Link</th>
+												<th>Quantity</th>
+												<th>Charge</th>
+												<th>Service</th>
+												<th>Status</th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>#415</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>5,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#416</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>4,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#415</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>3,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#417</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>2,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#418</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>5,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#419</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>4,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#115</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>5,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#716</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>4,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#815</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>3,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#417</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>2,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#420</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>5,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+											<tr>
+												<td>#41</td>
+												<td>25-01-2024</td>
+												<td><a href="#">https://kick.com/username3</a></td>
+												<td>4,000</td>
+												<td>40 Credits</td>
+												<td>Views</td>
+												<td><span class="completed">Completed</span></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</main>
+	</div>
+	<script src="https://unpkg.com/jquery/dist/jquery.min.js?_v=20240404223655"></script>
+	<script src="https://unpkg.com/gridjs-jquery/dist/gridjs.production.min.js?_v=20240404223655"></script>
+	<script src="js/app.min.js?_v=20240404223655"></script>
+</body>
+
+</html>

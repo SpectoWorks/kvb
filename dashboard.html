@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-	<title>Home</title>
+	<title>New Order</title>
 	<meta charset="UTF-8" />
 	<meta name="format-detection" content="telephone=no" />
 	<!-- <style>body{opacity: 0;}</style> -->
@@ -44,8 +44,8 @@
 						</div>
 						<div class="sidebar-nav">
 							<nav>
-								<a href="dashboard.html" class="dashboard-link">Home</a>
-								<a href="new-order.html" class="order-link active">Dashboard</a>
+								<a href="home.html" class="home-link">Home</a>
+								<a href="dashboard.html" class="dashboard-link active">Dashboard</a>
 								<a href="add-balance.html" class="balance-link">Add Balance</a>
 								<a href="account-settings.html" class="account-link">Account Settings</a>
 							</nav>
@@ -56,7 +56,7 @@
 					<div class="container">
 						<div class="page-content-header">
 							<div>
-								<h2>Home</h2>
+								<h2>Dashboard</h2>
 							</div>
 							<div class="header-panel">
 								<div class="mobile-panel-col">
@@ -87,220 +87,386 @@
 								</div>
 							</div>
 						</div>
-						<div class="dashboard">
-							<div class="column-grid">
-								<div class="start-row">
-									<div class="row">
-										<div class="box start-row-item">
-											<div class="d-flex">
-												<h3>Kick Views</h3>
-												<div class="available">
-													<span>53,391</span>
-													<p>Available</p>
-												</div>
+						<div class="new-order-page">
+							<div class="content">
+								<div class="box order-box">
+									<div data-tabs class="tabs">
+										<nav data-tabs-titles class="tabs__navigation">
+											<button type="button" class="tabs__title kick-views _tab-active">
+												Viewbot
+											</button>
+											<button type="button" class="tabs__title kick-chats">
+												Chatbot
+											</button>
+											<button type="button" class="tabs__title kick-followers">
+												Followbot
+											</button>
+											<button type="button" class="tabs__title kick-likes">
+												Pollbot
+											</button>
+										</nav>
+										<div data-tabs-body class="tabs__content">
+											<div class="tabs__body">
+												<form class="kick-form">
+													<div class="d-flex">
+														<div class="adjust-settings">
+															<h2>Adjust settings</h2>
+															<div class="adjust-settings-content">
+																<div class="form-group">
+																	<label>Username</label>
+																	<div class="form-group-input">
+																		<p>https://kick.com/username3</p>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group form-group-amount">
+																		<label>Amount</label>
+																		<div class="form-group-input">
+																			<p>4,485</p>
+																		</div>
+																		<span>Min: 10 - Max: 5,000</span>
+																	</div>
+																	<div class="form-group">
+																		<label>Cost</label>
+																		<div class="form-group-price">
+																			<p>4,020</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group">
+																		<label>Minimum Delay:</label>
+																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																	<span class="min-max-separator"></span>
+																	<div class="form-group">
+																		<label>Maximum Delay:</label>
+																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																</div>
+																<button class="btn btn-primary">
+																	Send Viewers
+																</button>
+															</div>
+														</div>
+														<div class="console-box">
+															<h2>Console</h2>
+															<div class="console-item">
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+															</div>
+														</div>
+													</div>
+												</form>
 											</div>
-											<a href="#" class="btn start">
-												<p>Get Started</p>
-											</a>
-										</div>
-										<div class="box start-row-item">
-											<div class="d-flex">
-												<h3>Kick Chats</h3>
-												<div class="available">
-													<span>53,391</span>
-													<p>Available</p>
-												</div>
+											<div class="tabs__body">
+												<form class="kick-form">
+													<div class="d-flex">
+														<div class="adjust-settings">
+															<h2>Adjust settings</h2>
+															<div class="adjust-settings-content">
+																<div class="form-group">
+																	<label>Username</label>
+																	<div class="form-group-input">
+																		<p>https://kick.com/username3</p>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group form-group-amount">
+																		<label>Amount</label>
+																		<div class="form-group-input">
+																			<p>4,485</p>
+																		</div>
+																		<span>Min: 10 - Max: 5,000</span>
+																	</div>
+																	<div class="form-group">
+																		<label>Cost</label>
+																		<div class="form-group-price">
+																			<p>4,020</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group">
+																		<label>Minimum Delay:</label>
+																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																	<span class="min-max-separator"></span>
+																	<div class="form-group">
+																		<label>Maximum Delay:</label>
+																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																</div>
+																<button class="btn btn-primary">
+																	Send Chats
+																</button>
+															</div>
+														</div>
+														<div class="console-box">
+															<h2>Console</h2>
+															<div class="console-item">
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+															</div>
+														</div>
+													</div>
+												</form>
 											</div>
-											<a href="#" class="btn start kick-start">
-												<p>Get Started</p>
-											</a>
-										</div>
-										<div class="box start-row-item">
-											<div class="d-flex">
-												<h3>Kick Followers</h3>
-												<div class="available">
-													<span>53,391</span>
-													<p>Available</p>
-												</div>
+											<div class="tabs__body">
+												<form class="kick-form">
+													<div class="d-flex">
+														<div class="adjust-settings">
+															<h2>Adjust settings</h2>
+															<div class="adjust-settings-content">
+																<div class="form-group">
+																	<label>Username</label>
+																	<div class="form-group-input">
+																		<p>https://kick.com/username3</p>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group form-group-amount">
+																		<label>Amount</label>
+																		<div class="form-group-input">
+																			<p>4,485</p>
+																		</div>
+																		<span>Min: 10 - Max: 5,000</span>
+																	</div>
+																	<div class="form-group">
+																		<label>Cost</label>
+																		<div class="form-group-price">
+																			<p>4,020</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group">
+																		<label>Minimum Delay:</label>
+																		<input type="number" class="input" step="0.001" value="4,485" placeholder="4,485" min="0.001" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																	<span class="min-max-separator"></span>
+																	<div class="form-group">
+																		<label>Maximum Delay:</label>
+																		<input type="number" class="input" step="0.001" value="4,485" placeholder="4,485" min="0.001" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																</div>
+																<button class="btn btn-primary">
+																	Send Followers
+																</button>
+															</div>
+														</div>
+														<div class="console-box">
+															<h2>Console</h2>
+															<div class="console-item">
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+															</div>
+														</div>
+													</div>
+												</form>
 											</div>
-											<a href="#" class="btn start kick-followers">
-												<p>Get Started</p>
-											</a>
-										</div>
-										<div class="box start-row-item">
-											<div class="d-flex">
-												<h3>Kick Likes</h3>
-												<div class="available">
-													<span>53,391</span>
-													<p>Available</p>
-												</div>
+											<div class="tabs__body">
+												<form class="kick-form">
+													<div class="d-flex">
+														<div class="adjust-settings">
+															<h2>Adjust settings</h2>
+															<div class="adjust-settings-content">
+																<div class="form-group">
+																	<label>Username</label>
+																	<div class="form-group-input">
+																		<p>https://kick.com/username3</p>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group form-group-amount">
+																		<label>Amount</label>
+																		<div class="form-group-input">
+																			<p>4,485</p>
+																		</div>
+																		<span>Min: 10 - Max: 5,000</span>
+																	</div>
+																	<div class="form-group">
+																		<label>Cost</label>
+																		<div class="form-group-price">
+																			<p>4,020</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group">
+																		<label>Minimum Delay:</label>
+																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																	<span class="min-max-separator"></span>
+																	<div class="form-group">
+																		<label>Maximum Delay:</label>
+																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																</div>
+																<button class="btn btn-primary">
+																	Send Likes
+																</button>
+															</div>
+														</div>
+														<div class="console-box">
+															<h2>Console</h2>
+															<div class="console-item">
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+															</div>
+														</div>
+													</div>
+												</form>
 											</div>
-											<a href="#" class="btn start kick-likes">
-												<p>Get Started</p>
-											</a>
 										</div>
 									</div>
 								</div>
-								<div class="middle-row">
-									<div class="row">
-										<div class="box repeat-order">
-											<div class="left">
-												<h2>Quick Buy your Recent Order</h2>
-												<a href="#" class="btn btn-green">Repeat Order</a>
-											</div>
-											<div class="right">
-												<p><strong>5,000</strong>Kick Views</p>
-												<a>https://kick.com/username</a>
-												<div class="tags">
-													<p>25-01-2024</p>
-													<p>4,350 Credits</p>
-												</div>
-											</div>
-										</div>
-										<div class="middle-items">
-											<div class="box">
-												<div>
-													<h3>Top up your Balance</h3>
-													<p>You current balance is: 5,205</p>
-												</div>
-												<a href="#" class="btn btn-money">Top up Balance</a>
-											</div>
-											<div class="box">
-												<div>
-													<h3>Buy a Subscription</h3>
-													<p>Your current subscription: Starter</p>
-												</div>
-												<a href="#" class="btn btn-money">Buy Subscription</a>
-											</div>
-										</div>
+								<div class="mobile-column">
+									<div class="box status-box">
+										<h2>Views Status</h2>
+										<ul>
+											<li>Connecting: <span>0</span></li>
+											<li>Viewing: <span> 2,496</span></li>
+											<li>Errors: <span>0</span></li>
+											<li>Dead: <span>0</span></li>
+										</ul>
+									</div>
+									<div class="box contact-box">
+										<h2>Contact Us</h2>
+										<p>If you need any help feel free to contact.</p>
+										<a href="#" class="btn btn-secondary">Contact Us</a>
 									</div>
 								</div>
-								<div class="content-table">
-									<h3>Recent Orders</h3>
-									<table id="orders-table-recent">
-										<thead>
-											<tr>
-												<th>ID</th>
-												<th>Date</th>
-												<th>Link</th>
-												<th>Quantity</th>
-												<th>Charge</th>
-												<th>Service</th>
-												<th>Status</th>
-											</tr>
-										</thead>
-										<tbody>
-											<tr>
-												<td>#415</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>5,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#416</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>4,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#415</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>3,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#417</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>2,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#418</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>5,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#419</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>4,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#115</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>5,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#716</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>4,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#815</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>3,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#417</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>2,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#420</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>5,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-											<tr>
-												<td>#41</td>
-												<td>25-01-2024</td>
-												<td><a href="#">https://kick.com/username3</a></td>
-												<td>4,000</td>
-												<td>40 Credits</td>
-												<td>Views</td>
-												<td><span class="completed">Completed</span></td>
-											</tr>
-										</tbody>
-									</table>
-								</div>
+							</div>
+							<div class="content-table">
+								<h3>Recent Orders</h3>
+								<table id="orders-table-recent">
+									<thead>
+										<tr>
+											<th>ID</th>
+											<th>Date</th>
+											<th>Link</th>
+											<th>Quantity</th>
+											<th>Charge</th>
+											<th>Service</th>
+											<th>Status</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>#415</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>5,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#416</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>4,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#415</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>3,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#417</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>2,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#418</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>5,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#419</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>4,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#115</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>5,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#716</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>4,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#815</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>3,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#417</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>2,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#420</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>5,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+										<tr>
+											<td>#41</td>
+											<td>25-01-2024</td>
+											<td><a href="#">https://kick.com/username3</a></td>
+											<td>4,000</td>
+											<td>40 Credits</td>
+											<td>Views</td>
+											<td><span class="completed">Completed</span></td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 						</div>
 					</div>
