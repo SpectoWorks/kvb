@@ -92,9 +92,64 @@
 								<div class="box order-box">
 									<div data-tabs class="tabs">
 										<nav data-tabs-titles class="tabs__navigation">
-											<button type="button" class="tabs__title kick-views _tab-active">
-												Viewbot
-											</button>
+											<div class="dropdown">
+												<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+												<script>
+												$(document).ready(function(){
+													var clicked = false;
+
+													$(".dropbtn").hover(function(){
+														if (!clicked) {
+															$(".dropdown-content").toggleClass("show");
+														}
+													});
+
+													$(".dropdown").hover(function(){
+														if (!clicked) {
+															$(".dropdown-content").toggleClass("show");
+															$(".icon").toggleClass("rotate");
+														}
+													});
+
+													$(".first").click(function(){
+														$("#live-viewbot-content").show();
+														$("#clip-viewbot-content").hide();
+														$(".dropdown-content").removeClass("show");
+														clicked = true;
+													});
+
+													$(".second").click(function(){
+														$("#live-viewbot-content").hide();
+														$("#clip-viewbot-content").show();
+														$(".dropdown-content").removeClass("show");
+														clicked = true;
+													});
+													$('.tabs__navigation .dropdown').on('click' ,function(e){
+														var $target = $(e.target);
+														  if(!$target.closest('.dropdown-content').length) {
+															$("#live-viewbot-content").show();														  	
+														  }  
+													});
+													$('.tabs__navigation>button').on('click' ,function(e){
+														$("#clip-viewbot-content").css('display' ,"none");
+														$("#live-viewbot-content").css("display" ,"none");
+													});
+													$(".dropdown").mouseleave(function(){
+														clicked = false;
+													});
+												});
+
+												</script>
+
+
+												<button type="button" class="tabs__title kick-views">Viewbot
+													<i class="icon"></i>
+												</button>
+												<div class="dropdown-content">
+													<a class="first" href="#">Live viewbot</a>
+													<a class="second" href="#">Clip viewbot</a>
+												</div>
+											</div>
 											<button type="button" class="tabs__title kick-chats">
 												Chatbot
 											</button>
@@ -106,48 +161,55 @@
 											</button>
 										</nav>
 										<div data-tabs-body class="tabs__content">
+											
+											<div id="clip-viewbot-content" style="display: none;">	
 											<div class="tabs__body">
 												<form class="kick-form">
 													<div class="d-flex">
 														<div class="adjust-settings">
-															<h2>Adjust settings</h2>
+															<script>
+$(document).ready(function(){
+    $(".input").focus(function(){
+        $(this).val('');
+    });
+});
+</script>
+															<h2>Clip viewbot</h2>
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
-																	<div class="form-group-input">
-																		<p>https://kick.com/username3</p>
-																	</div>
+																	<input type="letter" class="input"  value="https://kick.com/username" placeholder="https://kick.com/username" />
 																</div>
 																<div class="row">
 																	<div class="form-group form-group-amount">
 																		<label>Amount</label>
-																		<div class="form-group-input">
-																			<p>4,485</p>
-																		</div>
+																		
+																			<input type="number" class="input" step="1" value="10" min="10" max="5000" placeholder="10" />
+																		
 																		<span>Min: 10 - Max: 5,000</span>
 																	</div>
 																	<div class="form-group">
 																		<label>Cost</label>
 																		<div class="form-group-price">
-																			<p>4,020</p>
+																			<p>0</p>
 																		</div>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group">
 																		<label>Minimum Delay:</label>
-																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																	<span class="min-max-separator"></span>
 																	<div class="form-group">
 																		<label>Maximum Delay:</label>
-																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																</div>
 																<button class="btn btn-primary">
-																	Send Viewers
+																	Send Clip Views
 																</button>
 															</div>
 														</div>
@@ -160,11 +222,13 @@
 													</div>
 												</form>
 											</div>
-											<div class="tabs__body">
+										</div>
+										
+											<div class="tabs__body" id="chatbot-div">
 												<form class="kick-form">
 													<div class="d-flex">
 														<div class="adjust-settings">
-															<h2>Adjust settings</h2>
+															<h2>Chatbot</h2>
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
@@ -218,7 +282,7 @@
 												<form class="kick-form">
 													<div class="d-flex">
 														<div class="adjust-settings">
-															<h2>Adjust settings</h2>
+															<h2>Followbot</h2>
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
@@ -272,7 +336,7 @@
 												<form class="kick-form">
 													<div class="d-flex">
 														<div class="adjust-settings">
-															<h2>Adjust settings</h2>
+															<h2>Pollbot</h2>
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
@@ -322,6 +386,62 @@
 													</div>
 												</form>
 											</div>
+											<div id="live-viewbot-content">
+											<div class="tabs__body">
+												<form class="kick-form">
+													<div class="d-flex">
+														<div class="adjust-settings">
+															<h2>Live viewbot</h2>
+															<div class="adjust-settings-content">
+																<div class="form-group">
+																	<label>Username</label>
+																	<div class="form-group-input">
+																		<p>https://kick.com/username3</p>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group form-group-amount">
+																		<label>Amount</label>
+																		<div class="form-group-input">
+																			<p>4,485</p>
+																		</div>
+																		<span>Min: 10 - Max: 5,000</span>
+																	</div>
+																	<div class="form-group">
+																		<label>Cost</label>
+																		<div class="form-group-price">
+																			<p>4,020</p>
+																		</div>
+																	</div>
+																</div>
+																<div class="row">
+																	<div class="form-group">
+																		<label>Minimum Delay:</label>
+																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																	<span class="min-max-separator"></span>
+																	<div class="form-group">
+																		<label>Maximum Delay:</label>
+																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<span>Min: 10s - Max: 50s</span>
+																	</div>
+																</div>
+																<button class="btn btn-primary">
+																	Send Live Viewers
+																</button>
+															</div>
+														</div>
+														<div class="console-box">
+															<h2>Console</h2>
+															<div class="console-item">
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+															</div>
+														</div>
+													</div>
+												</form>
+											</div>
+										</div>
 										</div>
 									</div>
 								</div>

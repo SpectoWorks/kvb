@@ -93,15 +93,32 @@
 									<div class="row">
 										<div class="box start-row-item">
 											<div class="d-flex">
-												<h3>Kick Viewbot</h3>
+												<h3>Viewbot</h3>
 												<div class="available">
 													<span>53,391</span>
 													<p>Available</p>
 												</div>
 											</div>
-											<a href="#" class="btn start">
-												<p>Get Started</p>
-											</a>
+											<div class="dropdown">
+												<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $(".dropbtn").click(function(){
+    $(".dropdown-content").toggleClass("show");
+  });
+});
+</script>
+<button class="dropbtn">Get Started
+	<script>document.querySelector('.dropbtn').addEventListener('click', function() {
+		document.querySelector('.icon').classList.toggle('rotate');
+	  });</script>
+	<i class="icon"></i>
+  </button>
+  <div class="dropdown-content">
+	<a class="first" href="#">Live viewbot</a>
+	<a class="second" href="#">Clip viewbot</a>
+  </div>
+											</div>
 										</div>
 										<div class="box start-row-item">
 											<div class="d-flex">

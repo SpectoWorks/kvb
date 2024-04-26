@@ -345,4 +345,6 @@
     isWebp();
     menuInit();
     tabs();
+
+    
 })();
