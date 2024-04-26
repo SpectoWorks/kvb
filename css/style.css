@@ -618,15 +618,15 @@ font-size: 17px;
   border-radius: 8px;
   border: 1px solid #424945;
   background: #24262b;
-  color: #53fc18;
-  text-align: right;
-  padding: 15px 18px;
+  color: #f3ffef;
+  text-align: left;
+  padding: 25px 28px;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 17px;
   font-style: normal;
-  font-weight: 700;
-  top: 26px;
-  right: 0;
+  font-weight: 400;
+  top: 40px;
+  right: -40px;
   transition: all .4s ease;
   opacity: 0;
   z-index: -1
@@ -635,7 +635,10 @@ font-size: 17px;
   margin-bottom: 12px;
   font-size: 16px;
   font-weight: 700;
-  line-height: 19.36px
+  line-height: 15.36px;
+  color: #B2B2B2;
+  font-size:16px;
+  font-weight: 400;
 }
 .dropdown .dropdown__list li:last-child {
   margin-bottom: 0
