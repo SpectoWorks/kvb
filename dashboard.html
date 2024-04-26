@@ -92,7 +92,7 @@
 								<div class="box order-box">
 									<div data-tabs class="tabs">
 										<nav data-tabs-titles class="tabs__navigation">
-											<div class="dropdown">
+											<div class="dropdown_Viewbot_Dashboard">
 												<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 												<script>
 												$(document).ready(function(){
@@ -100,13 +100,13 @@
 
 													$(".dropbtn").hover(function(){
 														if (!clicked) {
-															$(".dropdown-content").toggleClass("show");
+															$(".dropdown_Viewbot_Dashboard-content").toggleClass("show");
 														}
 													});
 
-													$(".dropdown").hover(function(){
+													$(".dropdown_Viewbot_Dashboard").hover(function(){
 														if (!clicked) {
-															$(".dropdown-content").toggleClass("show");
+															$(".dropdown_Viewbot_Dashboard-content").toggleClass("show");
 															$(".icon").toggleClass("rotate");
 														}
 													});
@@ -114,19 +114,19 @@
 													$(".first").click(function(){
 														$("#live-viewbot-content").show();
 														$("#clip-viewbot-content").hide();
-														$(".dropdown-content").removeClass("show");
+														$(".dropdown_Viewbot_Dashboard-content").removeClass("show");
 														clicked = true;
 													});
 
 													$(".second").click(function(){
 														$("#live-viewbot-content").hide();
 														$("#clip-viewbot-content").show();
-														$(".dropdown-content").removeClass("show");
+														$(".dropdown_Viewbot_Dashboard-content").removeClass("show");
 														clicked = true;
 													});
-													$('.tabs__navigation .dropdown').on('click' ,function(e){
+													$('.tabs__navigation .dropdown_Viewbot_Dashboard').on('click' ,function(e){
 														var $target = $(e.target);
-														  if(!$target.closest('.dropdown-content').length) {
+														  if(!$target.closest('.dropdown_Viewbot_Dashboard-content').length) {
 															$("#live-viewbot-content").show();														  	
 														  }  
 													});
@@ -134,7 +134,7 @@
 														$("#clip-viewbot-content").css('display' ,"none");
 														$("#live-viewbot-content").css("display" ,"none");
 													});
-													$(".dropdown").mouseleave(function(){
+													$(".dropdown_Viewbot_Dashboard").mouseleave(function(){
 														clicked = false;
 													});
 												});
@@ -145,7 +145,7 @@
 												<button type="button" class="tabs__title kick-views">Viewbot
 													<i class="icon"></i>
 												</button>
-												<div class="dropdown-content">
+												<div class="dropdown_Viewbot_Dashboard-content">
 													<a class="first" href="#">Live viewbot</a>
 													<a class="second" href="#">Clip viewbot</a>
 												</div>
@@ -216,7 +216,7 @@ $(document).ready(function(){
 														<div class="console-box">
 															<h2>Console</h2>
 															<div class="console-item">
-																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]" readonly disabled></textarea>
 															</div>
 														</div>
 													</div>
@@ -232,35 +232,33 @@ $(document).ready(function(){
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
-																	<div class="form-group-input">
-																		<p>https://kick.com/username3</p>
-																	</div>
+<input type="letter" class="input"  value="https://kick.com/username" placeholder="https://kick.com/username" />
 																</div>
 																<div class="row">
 																	<div class="form-group form-group-amount">
 																		<label>Amount</label>
-																		<div class="form-group-input">
-																			<p>4,485</p>
-																		</div>
+																		
+																			<input type="number" class="input" step="1" value="10" min="10" max="5000" placeholder="10" />
+																	
 																		<span>Min: 10 - Max: 5,000</span>
 																	</div>
 																	<div class="form-group">
 																		<label>Cost</label>
 																		<div class="form-group-price">
-																			<p>4,020</p>
+																			<p>0</p>
 																		</div>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group">
 																		<label>Minimum Delay:</label>
-																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																	<span class="min-max-separator"></span>
 																	<div class="form-group">
 																		<label>Maximum Delay:</label>
-																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																</div>
@@ -272,7 +270,7 @@ $(document).ready(function(){
 														<div class="console-box">
 															<h2>Console</h2>
 															<div class="console-item">
-																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]" readonly disabled></textarea>
 															</div>
 														</div>
 													</div>
@@ -286,35 +284,33 @@ $(document).ready(function(){
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
-																	<div class="form-group-input">
-																		<p>https://kick.com/username3</p>
-																	</div>
+<input type="letter" class="input"  value="https://kick.com/username" placeholder="https://kick.com/username" />
 																</div>
 																<div class="row">
 																	<div class="form-group form-group-amount">
 																		<label>Amount</label>
-																		<div class="form-group-input">
-																			<p>4,485</p>
-																		</div>
+																		
+																			<input type="number" class="input" step="1" value="10" min="10" max="5000" placeholder="10" />
+																	
 																		<span>Min: 10 - Max: 5,000</span>
 																	</div>
 																	<div class="form-group">
 																		<label>Cost</label>
 																		<div class="form-group-price">
-																			<p>4,020</p>
+																			<p>0</p>
 																		</div>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group">
 																		<label>Minimum Delay:</label>
-																		<input type="number" class="input" step="0.001" value="4,485" placeholder="4,485" min="0.001" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																	<span class="min-max-separator"></span>
 																	<div class="form-group">
 																		<label>Maximum Delay:</label>
-																		<input type="number" class="input" step="0.001" value="4,485" placeholder="4,485" min="0.001" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																</div>
@@ -326,7 +322,7 @@ $(document).ready(function(){
 														<div class="console-box">
 															<h2>Console</h2>
 															<div class="console-item">
-																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]" readonly disabled></textarea>
 															</div>
 														</div>
 													</div>
@@ -340,35 +336,33 @@ $(document).ready(function(){
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
-																	<div class="form-group-input">
-																		<p>https://kick.com/username3</p>
-																	</div>
+<input type="letter" class="input"  value="https://kick.com/username" placeholder="https://kick.com/username" />
 																</div>
 																<div class="row">
 																	<div class="form-group form-group-amount">
 																		<label>Amount</label>
-																		<div class="form-group-input">
-																			<p>4,485</p>
-																		</div>
+																		
+																			<input type="number" class="input" step="1" value="10" min="10" max="5000" placeholder="10" />
+																		
 																		<span>Min: 10 - Max: 5,000</span>
 																	</div>
 																	<div class="form-group">
 																		<label>Cost</label>
 																		<div class="form-group-price">
-																			<p>4,020</p>
+																			<p>0</p>
 																		</div>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group">
 																		<label>Minimum Delay:</label>
-																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																	<span class="min-max-separator"></span>
 																	<div class="form-group">
 																		<label>Maximum Delay:</label>
-																		<input type="number" class="input" step="0.001" value="4,485" min="0.001" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																</div>
@@ -380,7 +374,7 @@ $(document).ready(function(){
 														<div class="console-box">
 															<h2>Console</h2>
 															<div class="console-item">
-																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]" readonly disabled></textarea>
 															</div>
 														</div>
 													</div>
@@ -395,35 +389,33 @@ $(document).ready(function(){
 															<div class="adjust-settings-content">
 																<div class="form-group">
 																	<label>Username</label>
-																	<div class="form-group-input">
-																		<p>https://kick.com/username3</p>
-																	</div>
+<input type="letter" class="input"  value="https://kick.com/username" placeholder="https://kick.com/username" />
 																</div>
 																<div class="row">
 																	<div class="form-group form-group-amount">
 																		<label>Amount</label>
-																		<div class="form-group-input">
-																			<p>4,485</p>
-																		</div>
+																	
+																			<input type="number" class="input" step="1" value="10" min="10" max="5000" placeholder="10" />
+																		
 																		<span>Min: 10 - Max: 5,000</span>
 																	</div>
 																	<div class="form-group">
 																		<label>Cost</label>
 																		<div class="form-group-price">
-																			<p>4,020</p>
+																			<p>0</p>
 																		</div>
 																	</div>
 																</div>
 																<div class="row">
 																	<div class="form-group">
 																		<label>Minimum Delay:</label>
-																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																	<span class="min-max-separator"></span>
 																	<div class="form-group">
 																		<label>Maximum Delay:</label>
-																		<input type="number" class="input" step="0.001" min="0.001" value="4,485" placeholder="4,485" />
+																		<input type="number" class="input" step="1" value="10" min="10" max="50" placeholder="10" />
 																		<span>Min: 10s - Max: 50s</span>
 																	</div>
 																</div>
@@ -435,7 +427,7 @@ $(document).ready(function(){
 														<div class="console-box">
 															<h2>Console</h2>
 															<div class="console-item">
-																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]"></textarea>
+																<textarea class="input" placeholder="> Successfully connected to channel, [kvb-gg]" readonly disabled></textarea>
 															</div>
 														</div>
 													</div>
