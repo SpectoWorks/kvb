@@ -1928,6 +1928,9 @@ font-size: 17px;
     padding: 0;
     padding-top: 30px
   }
+  .tabs__title.kick-views{
+    padding-left: 62px;
+  }
 }
 @media (max-width:680px) {
   .dashboard .start-row .row {
@@ -2021,6 +2024,10 @@ font-size: 17px;
   }
 }
 @media (max-width:470px) {
+  .tabs__title.kick-views{
+    padding-left: 15px;
+    justify-content: center;
+  }
   .new-order-page .tabs__title {
     background-image: none
   }
@@ -2141,4 +2148,10 @@ padding-left: 60px;
 
 .hidden {
   display: none;
+}
+.dropdown .dropdown__list{
+  pointer-events: none;
+}
+.dropdown .dropdown__list.active{
+  pointer-events: initial;
 }

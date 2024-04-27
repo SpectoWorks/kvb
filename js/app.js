@@ -1,5 +1,6 @@
 (() => {
     "use strict";
+
     function isWebp() {
         function testWebP(callback) {
             let webP = new Image;
@@ -346,5 +347,4 @@
     menuInit();
     tabs();
 
-    
 })();

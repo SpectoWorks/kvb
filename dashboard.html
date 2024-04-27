@@ -108,9 +108,25 @@
 													});
 
 													$(".dropdown_Viewbot_Dashboard").hover(function(){
-														if (!clicked) {
-															$(".dropdown_Viewbot_Dashboard-content").toggleClass("show");
-															$(".icon").toggleClass("rotate");
+														if ($(window).width() > 1200) {
+															if (!clicked) {
+																$(".dropdown_Viewbot_Dashboard-content").toggleClass("show");
+																$(".icon").toggleClass("rotate");
+															}
+														}
+													});
+													$('.dropdown_Viewbot_Dashboard').on('click' ,function(e){
+														e.preventDefault();
+														if ($(window).width() < 1200) {
+															if ($(this).hasClass('opened')) {
+																$(this).removeClass("opened");
+																$(this).find(".icon").removeClass("rotate");
+																$('.dropdown_Viewbot_Dashboard-content').css('display' ,"none");
+															} else {
+																$(this).addClass("opened");
+																$(this).find(".icon").addClass("rotate");						
+																$('.dropdown_Viewbot_Dashboard-content').css("display" ,"flex");										
+															}
 														}
 													});
 
@@ -119,6 +135,8 @@
 														$("#clip-viewbot-content").hide();
 														$(".dropdown_Viewbot_Dashboard-content").removeClass("show");
 														clicked = true;
+														$('.dropdown_Viewbot_Dashboard .tabs__title .icon').removeClass("rotate");
+														$('.dropdown_Viewbot_Dashboard').removeClass("_tab-active")
 													});
 
 													$(".second").click(function(){
@@ -126,6 +144,8 @@
 														$("#clip-viewbot-content").show();
 														$(".dropdown_Viewbot_Dashboard-content").removeClass("show");
 														clicked = true;
+														$('.dropdown_Viewbot_Dashboard .tabs__title .icon').removeClass("rotate");
+														$('.dropdown_Viewbot_Dashboard').removeClass("_tab-active");
 													});
 													$('.tabs__navigation .dropdown_Viewbot_Dashboard').on('click' ,function(e){
 														var $target = $(e.target);
